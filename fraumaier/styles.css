@@ -509,6 +509,27 @@ a { color: inherit; text-underline-offset: .14em; }
 .price-notes { display: flex; gap: 28px; margin-top: 20px; color: var(--muted); font-size: clamp(.7rem, .85vw, .85rem); }
 .price-notes p { margin-bottom: 0; }
 
+.editorial-image {
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  overflow: hidden;
+  background: var(--mid);
+  box-shadow: clamp(12px, 1.7vw, 24px) clamp(12px, 1.7vw, 24px) 0 var(--red);
+}
+
+.editorial-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.82) contrast(1.04);
+  transform: scale(1.025);
+  transition: transform 1800ms var(--ease);
+}
+
+.slide.is-active .editorial-image img { transform: scale(1); }
+
 [data-reveal] {
   opacity: 0;
   transform: translate3d(90px, 0, 0);
@@ -618,6 +639,7 @@ a { color: inherit; text-underline-offset: .14em; }
   .price-option small { margin-top: 4px; font-size: .6rem; }
   .price-or { font-size: .8rem; }
   .price-notes { gap: 10px; margin-top: 10px; font-size: .5rem; }
+  .editorial-image { box-shadow: 8px 8px 0 var(--red); }
   .chrome { right: 15px; bottom: 14px; left: 15px; grid-template-columns: 72px 1fr auto; }
   .control { width: 40px; height: 40px; }
 }
