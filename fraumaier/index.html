@@ -2,75 +2,44 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Hier entsteht eine persönliche Präsentation von Martin Thun.">
-  <title>Wachstum mit Martin Thun</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #10100f;
-      color: #f7f3eb;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      min-height: 100vh;
-      margin: 0;
-      display: grid;
-      place-items: center;
-      padding: 24px;
-      background:
-        radial-gradient(circle at 15% 20%, rgba(217, 174, 112, 0.2), transparent 32rem),
-        radial-gradient(circle at 85% 80%, rgba(107, 137, 119, 0.18), transparent 28rem),
-        #10100f;
-    }
-
-    main {
-      width: min(760px, 100%);
-      padding: clamp(32px, 7vw, 72px);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 28px;
-      background: rgba(255, 255, 255, 0.045);
-      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
-      backdrop-filter: blur(16px);
-    }
-
-    .signature-logo {
-      display: block;
-      width: min(360px, 74vw);
-      height: auto;
-      margin: 0 0 28px;
-      filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.22));
-    }
-
-    h1 {
-      max-width: 12ch;
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(3rem, 9vw, 6.5rem);
-      font-weight: 400;
-      line-height: 0.94;
-      letter-spacing: -0.055em;
-    }
-
-    p:last-child {
-      max-width: 46ch;
-      margin: 30px 0 0;
-      color: rgba(247, 243, 235, 0.7);
-      font-size: clamp(1rem, 2vw, 1.15rem);
-      line-height: 1.65;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="Präsentation für Frau Maier.">
+  <meta name="theme-color" content="#ff2b21">
+  <title>Frau Maier</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main>
-    <img class="signature-logo" src="assets/frau-maier-signature.png" alt="Frau Maier">
-    <h1>Etwas Großes entsteht.</h1>
-    <p>Diese Seite wird gerade vorbereitet. Bald findest du hier eine persönliche Präsentation mit neuen Perspektiven für nachhaltiges Wachstum.</p>
+  <main class="deck" aria-label="Präsentation">
+    <div class="track" id="track">
+      <section class="slide slide-1 is-active" aria-label="Slide 1 von 5">
+        <div class="slide__content">
+          <img class="signature-logo" src="assets/frau-maier-signature.png" alt="Frau Maier" data-reveal style="--delay:80ms">
+          <h1 class="display" data-reveal style="--delay:180ms">Platzhalter für Slide 1</h1>
+          <p class="body-copy" data-reveal style="--delay:300ms">Text für Slide 1</p>
+        </div>
+      </section>
+      <section class="slide slide-2" aria-label="Slide 2 von 5" aria-hidden="true">
+        <div class="slide__content"><h2 class="display" data-reveal>Platzhalter für Slide 2</h2><p class="body-copy" data-reveal style="--delay:280ms">Text für Slide 2</p></div>
+      </section>
+      <section class="slide slide-3" aria-label="Slide 3 von 5" aria-hidden="true">
+        <div class="slide__content"><h2 class="display" data-reveal>Platzhalter für Slide 3</h2><p class="body-copy" data-reveal style="--delay:280ms">Text für Slide 3</p></div>
+      </section>
+      <section class="slide slide-4" aria-label="Slide 4 von 5" aria-hidden="true">
+        <div class="slide__content"><h2 class="display" data-reveal>Platzhalter für Slide 4</h2><p class="body-copy" data-reveal style="--delay:280ms">Text für Slide 4</p></div>
+      </section>
+      <section class="slide slide-5" aria-label="Slide 5 von 5" aria-hidden="true">
+        <div class="slide__content"><h2 class="display" data-reveal>Platzhalter für Slide 5</h2><p class="body-copy" data-reveal style="--delay:280ms">Text für Slide 5</p></div>
+      </section>
+    </div>
   </main>
+  <nav class="chrome" aria-label="Slide-Navigation">
+    <div class="counter" aria-live="polite"><span id="current">01</span> / 05</div>
+    <div class="progress" aria-hidden="true"><div class="progress__bar" id="progress"></div></div>
+    <div class="controls">
+      <button class="control" id="previous" type="button" aria-label="Vorherige Slide" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+      <button class="control" id="next" type="button" aria-label="Nächste Slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+    </div>
+  </nav>
+  <script src="deck.js"></script>
 </body>
 </html>
