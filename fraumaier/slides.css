@@ -1,6 +1,5 @@
-.slide-1 {
-  background: var(--brown);
-}
+/* 01 — Cover */
+.slide-1 { background: var(--brown); }
 
 .slide-1::before {
   content: "";
@@ -18,22 +17,32 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 58%;
+  left: 43%;
   width: 1px;
   background: rgba(244, 233, 216, .2);
 }
 
-.slide-1 .cover { width: min(51%, 760px); }
+.slide-1 .cover { width: min(52%, 740px); margin-left: auto; }
 
-.cover-photo {
-  top: 9vh;
-  right: 7vw;
-  width: min(34vw, 520px);
-  height: 72vh;
+.cover-mark {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  left: 5vw;
+  display: flex;
+  width: min(31vw, 470px);
+  align-items: center;
 }
 
-.cover-photo img { object-position: 50% 38%; }
+.cover-mark img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 22px 50px rgba(20, 5, 3, .28));
+}
 
+/* 02 — Challenge & Ziele */
 .slide-2 {
   color: var(--dark);
   background: var(--cream);
@@ -60,9 +69,32 @@
   background: var(--red);
 }
 
-.slide-3 { background: var(--dark); }
+/* 03 — Marke breit, Einstieg schmal */
+.slide-3 {
+  color: var(--cream);
+  background: var(--red);
+}
 
 .slide-3::before {
+  content: "";
+  position: absolute;
+  top: -15%;
+  right: -8%;
+  width: 42vw;
+  height: 130%;
+  border-left: 1px solid rgba(244, 233, 216, .38);
+  background: rgba(85, 35, 25, .14);
+  transform: translateX(35%);
+  transition: transform 1200ms var(--ease);
+}
+
+.slide-3.is-active::before { transform: translateX(0); }
+.slide-3 .side-copy { color: var(--dark); background: var(--cream); }
+
+/* 04 — Was es braucht */
+.slide-4 { background: var(--brown); }
+
+.slide-4::before {
   content: "";
   position: absolute;
   top: 0;
@@ -75,69 +107,43 @@
   transition: transform 1100ms var(--ease);
 }
 
-.slide-3.is-active::before { transform: scaleY(1); }
-.slide-3 .compact-width { max-width: min(53%, 780px); }
+.slide-4.is-active::before { transform: scaleY(1); }
+.slide-4 .compact-width { max-width: min(53%, 780px); }
 
 .sunset-photo {
   top: 17vh;
   right: 6vw;
   width: min(34vw, 540px);
   height: 55vh;
-  box-shadow: clamp(12px, 1.7vw, 24px) clamp(12px, 1.7vw, 24px) 0 var(--mid);
+  box-shadow: clamp(12px, 1.7vw, 24px) clamp(12px, 1.7vw, 24px) 0 var(--red);
 }
 
 .sunset-photo img { object-position: 50% 50%; }
 
-.slide-4 {
-  color: var(--cream);
-  background: var(--red);
+/* 05 — Die vier Stationen */
+.slide-5 {
+  color: var(--dark);
+  background: var(--cream);
 }
 
-.slide-4::before {
+.slide-5::before {
   content: "";
   position: absolute;
   right: -16vw;
   bottom: -34vw;
   width: 78vw;
   aspect-ratio: 1;
-  border: clamp(50px, 8vw, 130px) solid rgba(244, 233, 216, .1);
+  border: clamp(50px, 8vw, 130px) solid rgba(255, 43, 33, .1);
   border-radius: 50%;
   transform: scale(.72);
   transition: transform 1400ms var(--ease);
 }
 
-.slide-4.is-active::before { transform: scale(1); }
-.slide-4 .channel-list { background: rgba(244, 233, 216, .22); }
-.slide-4 .channel-list li { color: var(--cream); background: var(--dark); }
+.slide-5.is-active::before { transform: scale(1); }
+.slide-5 .channel-layout { grid-template-columns: .84fr 1.16fr; gap: clamp(36px, 5.5vw, 90px); }
+.slide-5 .channel-title { max-width: 11ch; margin-bottom: 20px; }
 
-.slide-5 { background: var(--mid); }
-
-.slide-5::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: min(42vw, 590px);
-  aspect-ratio: 1;
-  border: 1px solid rgba(244, 233, 216, .28);
-  border-radius: 50%;
-  transform: translate(-55%, -50%) scale(.7);
-  transition: transform 1250ms var(--ease);
-}
-
-.slide-5::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 24%;
-  height: 100%;
-  background: rgba(35, 12, 8, .16);
-}
-
-.slide-5.is-active::before { transform: translate(-38%, -50%) scale(1); }
-.slide-5 .side-copy { background: var(--cream); }
-
+/* 06 — Test-Reels */
 .slide-6 { background: var(--dark); }
 
 .slide-6::before {
@@ -167,6 +173,7 @@
 
 .slide-6.is-active::before { transform: translateX(0); }
 
+/* 07 — Test-Reels: Ansatz */
 .slide-7 {
   color: var(--dark);
   background: var(--cream);
@@ -195,6 +202,7 @@
 
 .work-photo img { object-position: 50% 45%; }
 
+/* 08 — Beispiel-Hook */
 .slide-8 { background: var(--dark); }
 
 .slide-8::before {
@@ -222,12 +230,42 @@
 
 .slide-8 .caption-card { box-shadow: 18px 18px 0 rgba(255, 43, 33, .82); }
 
-.slide-9 {
+/* 09 — IG Main Account */
+.slide-9 { background: var(--mid); }
+
+.slide-9::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: min(42vw, 590px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(244, 233, 216, .28);
+  border-radius: 50%;
+  transform: translate(-55%, -50%) scale(.7);
+  transition: transform 1250ms var(--ease);
+}
+
+.slide-9::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24%;
+  height: 100%;
+  background: rgba(35, 12, 8, .16);
+}
+
+.slide-9.is-active::before { transform: translate(-38%, -50%) scale(1); }
+.slide-9 .side-copy { background: var(--cream); }
+
+/* 10 — Ads */
+.slide-10 {
   color: var(--cream);
   background: var(--red);
 }
 
-.slide-9::before {
+.slide-10::before {
   content: "";
   position: absolute;
   top: -15%;
@@ -240,38 +278,18 @@
   transition: transform 1200ms var(--ease);
 }
 
-.slide-9.is-active::before { transform: translateX(0); }
-.slide-9 .title-number { color: var(--cream); }
-.slide-9 .goals-card { box-shadow: 18px 18px 0 var(--brown); }
+.slide-10.is-active::before { transform: translateX(0); }
+.slide-10 .title-number { color: var(--cream); }
+.slide-10 .goals-card { box-shadow: 18px 18px 0 var(--brown); }
 
-.slide-10 {
-  color: var(--dark);
-  background: var(--cream);
+/* 11 — Was wird konkret umgesetzt */
+.slide-11 {
+  background:
+    linear-gradient(rgba(244, 233, 216, .04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 233, 216, .04) 1px, transparent 1px),
+    var(--dark);
+  background-size: 64px 64px;
 }
-
-.slide-10::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 34vw;
-  height: 16px;
-  background: var(--red);
-}
-
-.slide-10 .website-layout { width: min(59%, 860px); }
-
-.finca-photo {
-  top: 14vh;
-  right: 6vw;
-  width: min(30vw, 470px);
-  height: 60vh;
-  box-shadow: clamp(12px, 1.7vw, 24px) clamp(12px, 1.7vw, 24px) 0 var(--brown);
-}
-
-.finca-photo img { object-position: 50% 50%; }
-
-.slide-11 { background: var(--brown); }
 
 .slide-11::before {
   content: "";
@@ -283,15 +301,10 @@
   background: var(--red);
 }
 
-.slide-11 .roadmap-layout { width: min(82%, 1120px); }
+.slide-11 .delivery-layout { align-items: center; }
 
-.slide-12 {
-  background:
-    linear-gradient(rgba(244, 233, 216, .04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(244, 233, 216, .04) 1px, transparent 1px),
-    var(--dark);
-  background-size: 64px 64px;
-}
+/* 12 — Roadmap */
+.slide-12 { background: var(--brown); }
 
 .slide-12::before {
   content: "";
@@ -303,9 +316,37 @@
   background: var(--red);
 }
 
-.slide-13 { background: var(--brown); }
+.slide-12 .roadmap-layout { width: 100%; }
+.slide-12 .hero-title { margin-bottom: clamp(20px, 3vh, 40px); }
+.slide-12 .timeline { gap: clamp(12px, 2vh, 24px); }
+.slide-12 .timeline::before { left: clamp(92px, 9.5vw, 128px); }
+.slide-12 .timeline li { grid-template-columns: clamp(92px, 9.5vw, 128px) 1fr; }
+.slide-12 .timeline time { padding-right: 14px; font-size: clamp(.76rem, .94vw, .94rem); }
+.slide-12 .timeline span { padding: clamp(8px, 1.1vw, 14px) 0 clamp(8px, 1.1vw, 14px) clamp(16px, 1.8vw, 26px); font-size: clamp(.9rem, 1.2vw, 1.26rem); }
+
+/* 13 — Phase 2: Website */
+.slide-13 {
+  color: var(--dark);
+  background: var(--cream);
+}
 
 .slide-13::before {
+  content: "";
+  position: absolute;
+  top: -18vw;
+  right: -16vw;
+  width: 56vw;
+  aspect-ratio: 1;
+  border: clamp(35px, 6vw, 92px) solid rgba(255, 43, 33, .1);
+  border-radius: 50%;
+}
+
+.slide-13 .website-layout { width: min(72%, 1000px); }
+
+/* 15 — Invest */
+.slide-15 { background: var(--brown); }
+
+.slide-15::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -318,45 +359,105 @@
   transition: transform 1450ms var(--ease);
 }
 
-.slide-13.is-active::before { transform: translate(-50%, -50%) scale(1); }
-.slide-13 .investment-layout { width: min(67%, 1010px); align-items: flex-start; text-align: left; }
-.slide-13 .investment-logo { align-self: flex-start; }
-.slide-13 .price-notes { justify-content: flex-start; }
-.slide-13 .price-option strong { font-size: clamp(2.1rem, 3.15vw, 3.65rem); }
+.slide-15.is-active::before { transform: translate(-50%, -50%) scale(1); }
+.slide-15 .investment-layout { width: min(70%, 1050px); align-items: flex-start; text-align: left; }
+.slide-15 .investment-logo { align-self: flex-start; }
+.slide-15 .price-notes { justify-content: flex-start; }
 
 .investment-photo {
   top: 11vh;
-  right: 5vw;
-  width: min(26vw, 410px);
+  right: 4vw;
+  width: min(23vw, 370px);
   height: 66vh;
 }
 
 .investment-photo img { object-position: 50% 27%; }
 
+/* 16 — Der nächste Schritt */
+.slide-16 {
+  color: var(--cream);
+  background: var(--red);
+}
+
+.slide-16::before {
+  content: "";
+  position: absolute;
+  top: -20vw;
+  right: -14vw;
+  width: 58vw;
+  aspect-ratio: 1;
+  border: clamp(40px, 6vw, 110px) solid rgba(244, 233, 216, .1);
+  border-radius: 50%;
+  transform: scale(.76);
+  transition: transform 1400ms var(--ease);
+}
+
+.slide-16.is-active::before { transform: scale(1); }
+
+.slide-16::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 100%;
+  background: var(--brown);
+}
+
+.slide-16 .closing-layout { width: min(68%, 980px); }
+
+.closing-photo {
+  top: 11vh;
+  right: 4vw;
+  width: min(23vw, 370px);
+  height: 66vh;
+  box-shadow: clamp(12px, 1.7vw, 24px) clamp(12px, 1.7vw, 24px) 0 var(--brown);
+}
+
+.closing-photo img { object-position: 50% 22%; }
+
+/* 14 — Zwei Beispiele */
+.slide-14 { background: var(--mid); }
+
+.slide-14::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24%;
+  height: 100%;
+  background: rgba(35, 12, 8, .16);
+}
+
+.slide-14 .slide__content { height: 100%; }
+.slide-14 .proof-layout { width: 100%; height: 100%; }
+
+/* 15 — Meine Rolle */
+
 @media (max-width: 760px) {
-  .slide-1::after { left: auto; right: 48%; height: 34vh; }
-  .slide-1 .cover { width: 100%; justify-content: flex-end; padding-bottom: 24px; }
-  .slide-1 .cover .signature-logo { width: min(200px, 49vw); margin-bottom: 20px; }
+  .slide-1::after { left: 47%; right: auto; height: 34vh; }
+  .slide-1 .cover { width: 100%; margin-left: 0; justify-content: flex-end; padding-bottom: 24px; }
   .slide-1 .cover__title { max-width: 17ch; font-size: clamp(1.65rem, 7.3vw, 2.7rem); }
-  .cover-photo { top: 20px; right: 19px; width: 41vw; height: 31vh; }
-  .cover-photo img { object-position: 50% 34%; }
-  .slide-2::after, .slide-6::after { width: 8px; }
-  .slide-3 .compact-width { max-width: 100%; }
-  .slide-4::before { right: -45vw; bottom: -30vw; width: 125vw; }
-  .slide-5::before { width: 80vw; }
+  .cover-mark { top: 18px; bottom: auto; left: 19px; width: 46vw; }
+  .slide-2::after, .slide-6::after, .slide-7::before { width: 8px; }
+  .slide-4 .compact-width { max-width: 100%; }
+  .slide-5::before { right: -45vw; bottom: -30vw; width: 125vw; }
+  .slide-5 .channel-layout { grid-template-columns: 1fr; gap: 14px; }
+  .slide-5 .channel-title { max-width: 100%; margin-bottom: 8px; }
   .slide-6::before { right: -10vw; bottom: 3vh; font-size: 44vw; }
-  .slide-7 .reels-system, .slide-10 .website-layout, .slide-11 .roadmap-layout { width: 100%; }
+  .slide-7 .reels-system, .slide-12 .roadmap-layout, .slide-13 .website-layout { width: 100%; max-width: 100%; }
   .slide-8 .caption-card { box-shadow: 8px 8px 0 rgba(255, 43, 33, .82); }
-  .slide-9::before { right: -35%; width: 72vw; }
+  .slide-9::before { width: 80vw; }
+  .slide-10::before { right: -35%; width: 72vw; }
   .slide-11::before, .slide-12::before { width: 8px; }
-  .slide-12 { background-size: 36px 36px; }
-  .slide-13 .investment-layout { width: 100%; align-items: center; text-align: center; }
-  .slide-13 .investment-logo { align-self: center; }
-  .sunset-photo, .work-photo, .finca-photo, .investment-photo { display: none; }
+  .slide-11 { background-size: 36px 36px; }
+  .slide-15 .investment-layout { width: 100%; align-items: center; text-align: center; }
+  .slide-15 .investment-logo { align-self: center; }
+  .sunset-photo, .work-photo, .finca-photo, .investment-photo, .closing-photo { display: none; }
 }
 
 @media (max-height: 620px) and (min-width: 761px) {
-  .cover-photo, .sunset-photo, .work-photo, .finca-photo, .investment-photo {
+  .sunset-photo, .work-photo, .finca-photo, .investment-photo, .closing-photo {
     top: 8vh;
     height: 67vh;
   }

@@ -7,26 +7,39 @@
   <meta name="theme-color" content="#ff2b21">
   <title>Frau Maier</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="v3.css?v=20">
 </head>
 <body>
+  <div class="ambient-field" aria-hidden="true">
+    <span class="ambient-field__orb"></span>
+    <span class="ambient-field__beam"></span>
+  </div>
   <main class="deck" aria-label="Präsentation">
-    <div class="track" id="track">
-      <section class="slide slide-1 is-active" aria-label="Slide 1 von 13">
-        <figure class="editorial-image cover-photo" data-reveal style="--delay:100ms" aria-hidden="true">
-          <img src="assets/frau-maier-finca.webp" alt="">
-        </figure>
+    <div class="scroll-space" id="space">
+      <div class="viewport">
+        <div class="track" id="track">
+
+      <section class="slide slide-1" aria-label="Frau Maier">
+        <div class="cover-mark" data-reveal style="--delay:120ms" aria-hidden="true">
+          <img src="assets/frau-maier-signature.png" alt="" decoding="async" fetchpriority="high">
+        </div>
+        <div class="hero-cards" aria-hidden="true">
+          <figure class="hero-card hero-card--back"><img src="assets/mallorca-sunset.webp" alt="" decoding="async"></figure>
+          <figure class="hero-card hero-card--middle"><img src="assets/frau-maier-work.webp" alt="" decoding="async"></figure>
+          <figure class="hero-card hero-card--front"><img src="assets/frau-maier-portrait.webp" alt="" decoding="async" fetchpriority="high"></figure>
+        </div>
         <div class="slide__content cover">
-          <img class="signature-logo" src="assets/frau-maier-signature.png" alt="Frau Maier" data-reveal style="--delay:80ms">
-          <h1 class="cover__title" data-reveal style="--delay:180ms">Ich baue dir die Strukturen und Systeme, damit du Zeit &amp; Fokus dafür hast, Kontinentalplatten mit deinen Kunden zu verschieben ;-)</h1>
+          <h1 class="cover__title" data-reveal style="--delay:180ms">Du verschiebst Kontinentalplatten mit deinen Kundinnen.</h1>
+          <p class="cover__sub" data-reveal style="--delay:340ms">und ich baue deine Brand &amp; dein Marketing aus, damit die richtigen Frauen zu dir finden.</p>
         </div>
       </section>
 
-      <section class="slide slide-2" aria-label="Slide 2 von 13" aria-hidden="true">
+      <section class="slide slide-2" aria-label="Die größte Challenge">
         <div class="slide__content challenge-layout">
           <div class="challenge-block" data-reveal>
             <h2 class="content-title">Die größte Challenge ist aktuell:</h2>
             <ul class="statement-list">
-              <li>Positionierung / Wahl „der richtigen Nische“</li>
+              <li>Positionierung / Wahl „der richtigen Nische"</li>
               <li>Das bei IG / FB Sichtbarkeit zu bringen, was sich nicht in eine einzige Nische packen lässt (und trotzdem konkret und greifbar zu sein!)</li>
               <li>Alle Produkte in die passende Angebotswelt zu positionieren, die zur Marke passen</li>
             </ul>
@@ -43,37 +56,100 @@
         </div>
       </section>
 
-      <section class="slide slide-3" aria-label="Slide 3 von 13" aria-hidden="true">
+      <section class="slide slide-3" aria-label="Marke breit, Einstieg schmal">
+        <div class="slide__content two-column">
+          <div data-reveal>
+            <h2 class="hero-title">Marke breit. Einstieg schmal.</h2>
+            <p class="lead-copy">Du musst dich nicht festlegen. Du musst nur die richtigen Türen öffnen.</p>
+          </div>
+          <div class="side-copy" data-reveal style="--delay:250ms">
+            <p><strong>Die Marke ist Frau Maier.</strong> Die ganze Person. Werte, Lifestyle, Stil, Persönlichkeit, Spiritualität. Da wird nichts weggeschnitten.</p>
+            <p><strong>Der Einstieg ist eng.</strong> Ein Thema, ein Versprechen, eine Tür, durch die Fremde reinkommen.</p>
+            <p><strong>Welche Tür es wird, entscheidet keine Kopfgeburt,</strong> sondern die Zahlen und die Erfahrungen: Was Reichweite bringt, worauf Menschen reagieren und wofür sie gerne zahlen. Das sehen wir in den ersten Wochen.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide slide-4" aria-label="Was es braucht">
         <figure class="editorial-image sunset-photo" data-reveal style="--delay:120ms" aria-hidden="true">
-          <img src="assets/mallorca-sunset.webp" alt="">
+          <img src="assets/mallorca-sunset.webp" alt="" loading="lazy" decoding="async">
         </figure>
         <div class="slide__content compact-width">
           <h2 class="hero-title" data-reveal>Was es braucht:</h2>
           <ul class="statement-list statement-list--large" data-reveal style="--delay:220ms">
             <li>Kein Overengineering</li>
-            <li>Iterativer Prozess im Fokus (schnell Learnings sammeln und Optimieren – besser als lange Planen und „perfekt starten“)</li>
+            <li>Iterativer Prozess im Fokus (schnell Learnings sammeln und Optimieren, besser als lange planen und „perfekt starten")</li>
             <li>Momentum aufbauen ohne verkopft an die Sache ranzugehen</li>
           </ul>
           <p class="closing-line" data-reveal style="--delay:360ms">Konkret bedeutet das:</p>
         </div>
       </section>
 
-      <section class="slide slide-4" aria-label="Slide 4 von 13" aria-hidden="true">
+      <section class="slide slide-5" aria-label="Die vier Stationen">
         <div class="slide__content channel-layout">
-          <h2 class="hero-title channel-title" data-reveal>Aufbau von 3 Kanälen, die Planbar Follower &amp; Leads gewinnen:</h2>
+          <div data-reveal>
+            <h2 class="hero-title channel-title">Wie aus Nutzern Follower werden</h2>
+            <p class="lead-copy">und aus Followern → Kundinnen</p>
+          </div>
           <ol class="channel-list" data-reveal style="--delay:220ms">
-            <li><span>IG Main Account</span><small>(Personal Branding Fokus)</small></li>
-            <li><span>Test-Reels</span><small>(Reichweiten-Content &amp; Testing-Fokus)</small></li>
-            <li><span>Meta Ads</span><small>(Optimierung bestehender Ads + Aufbau eines Money Making Evergreen-Funnels)</small></li>
+            <li><span>Test-Reels</span><small>Reichweiten-Content &amp; Testing-Fokus. Holt täglich Fremde rein, ohne Ad-Budget.</small></li>
+            <li><span>IG Main Account</span><small>Personal Branding Fokus. Macht aus Fremden Community.</small></li>
+            <li><span>Meta Ads</span><small>Optimierung bestehender Ads + Aufbau eines Money Making Evergreen-Funnels.</small></li>
+            <li><span>WhatsApp &amp; E-Mail</span><small>Deine eigene Fläche. Kein Algorithmus dazwischen.</small></li>
           </ol>
         </div>
       </section>
 
-      <section class="slide slide-5" aria-label="Slide 5 von 13" aria-hidden="true">
+      <section class="slide slide-6" aria-label="Test-Reels">
+        <div class="slide__content reels-intro">
+          <h2 class="hero-title" data-reveal><span class="title-number">01</span> Test-Reels</h2>
+          <p class="feature-copy" data-reveal style="--delay:180ms">Test-Reels sind ein geniales Feature bei IG, um neue Zielgruppen zu erreichen. Die Beiträge werden nur NICHT-Followern ausgespielt und landen nicht im Feed deines Profils. Ich empfehle 5 Test-Reels täglich.</p>
+          <p class="metric-copy" data-reveal style="--delay:300ms">Das sind monatlich bis zu <strong>150 Reels</strong>, die für dich arbeiten, um Follower zu bringen und wertvolle Daten zu Zielgruppen zu sammeln (ohne dass du in Ads investieren musst, um zu testen!!)</p>
+        </div>
+      </section>
+
+      <section class="slide slide-7" aria-label="Test-Reels: Der Ansatz">
+        <figure class="editorial-image work-photo" data-reveal style="--delay:120ms" aria-hidden="true">
+          <img src="assets/frau-maier-work.webp" alt="" loading="lazy" decoding="async">
+        </figure>
+        <div class="slide__content reels-system">
+          <h2 class="hero-title" data-reveal>Test-Reels</h2>
+          <div class="method-grid" data-reveal style="--delay:180ms">
+            <p><strong>Der Ansatz:</strong> Keep it simple</p>
+            <p><strong>Umsetzung:</strong> zu 90% mit B-Rolls / 10% Face to Cam</p>
+          </div>
+          <p class="feature-copy" data-reveal style="--delay:280ms"><strong>Die Inhalte:</strong> spezifische Beiträge zum Thema STIL, Persönlichkeitsentwicklung, Spiritualität aber auch Lifestyle (funktioniert erfahrungsgemäß sehr gut!). Hier kann man sich wirklich risikofrei austoben und unterschiedliche Ansätze testen.</p>
+          <p class="closing-line" data-reveal style="--delay:380ms">Ein Beispiel:</p>
+        </div>
+      </section>
+
+      <section class="slide slide-8" aria-label="Beispiel-Hook">
+        <div class="slide__content example-layout">
+          <div class="example-hook" data-reveal>
+            <h2>Beispiel-Hook als On-Screen Text im B-Roll:</h2>
+            <blockquote>„Alle glauben, ich sei eine ganz normale Stilberaterin, bis sie erfahren, dass ich…"</blockquote>
+          </div>
+          <div class="caption-card" data-reveal style="--delay:180ms">
+            <h3>Caption:</h3>
+            <ul>
+              <li>👉 regelmäßig psychedelische Reisen mache &amp; Retreats halte</li>
+              <li>👉 nicht an die Angstmacherei der Tagesschau glaube</li>
+              <li>👉 Deutschland den Rücken gekehrt habe und mit meiner Familie auf Mallorca lebe</li>
+              <li>👉 mit Onlinekursen und Coachings in den letzten Jahren Millionen verdient habe</li>
+              <li>👉 mich immer freue, wenn ich um 11:11 oder 22:22 auf die Uhr schaue</li>
+              <li>👉 Frauen in meinen Räumen dazu bringe, ihr komplettes Leben zu verändern</li>
+              <li>…</li>
+            </ul>
+          </div>
+          <p class="example-result" data-reveal style="--delay:320ms">Solche Reels haben das Potenzial SEHR viel Reichweite zu erzielen und gleichzeitig auch viele GLEICHGESINNTE / QUALITATIVE Follower zu gewinnen, weil du sie nicht über „Mehrwert" anziehst, sondern über „Gemeinsame Werte" → Die Verbindung ist ab der ersten Sekunde sofort da (und es stößt diejenigen ab, die nicht so ticken wie du.)</p>
+        </div>
+      </section>
+
+      <section class="slide slide-9" aria-label="IG Main Account">
         <div class="slide__content two-column">
           <div data-reveal>
-            <h2 class="hero-title"><span class="title-number">1)</span> IG Main Account</h2>
-            <p class="lead-copy">Du positionierst dich nicht über Thema, Nische – sondern deine Verkörperung</p>
+            <h2 class="hero-title"><span class="title-number">02</span> IG Main Account</h2>
+            <p class="lead-copy">Du positionierst dich nicht über Thema, Nische, sondern deine Verkörperung</p>
             <ul class="plain-list">
               <li>Lifestyle</li>
               <li>Denkweise / Werte</li>
@@ -85,186 +161,175 @@
             <p><strong>Personal Branding:</strong> Wir orientieren uns nicht an einen Traumkunden-Avatar, sondern machen das sichtbar was DICH einzigartig macht und ziehen die Menschen an, die dich in der Ganzheit in ihrem Feld haben wollen (nicht nur ein Produkt von dir).</p>
             <h3>Fokus:</h3>
             <ul class="focus-list">
-              <li><strong>Primär:</strong> Community Aufbau &amp; Community Framing mit dem Ziel -&gt; Trust Building &amp; Verkauf</li>
+              <li><strong>Primär:</strong> Community Aufbau &amp; Community Framing mit dem Ziel → Trust Building &amp; Verkauf</li>
               <li><strong>Sekundär:</strong> Reichweite über Beiträge aufbauen</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section class="slide slide-6" aria-label="Slide 6 von 13" aria-hidden="true">
-        <div class="slide__content reels-intro">
-          <h2 class="hero-title" data-reveal><span class="title-number">2)</span> Test-Reels</h2>
-          <p class="feature-copy" data-reveal style="--delay:180ms">Test-Reels sind ein geniales Feature bei IG, um neue Zielgruppen zu erreichen – die Beiträge werden nur NICHT-Followern ausgespielt und landen nicht im Feed deines Profils. Täglich können bis zu 5 Test-Reels veröffentlicht werden.</p>
-          <p class="metric-copy" data-reveal style="--delay:300ms">Das sind monatlich bis zu <strong>150 Reels</strong>, die für dich arbeiten, um Follower bringen und wertvolle Daten zu Zielgruppen zu sammeln (ohne dass du in Ads investieren musst, um zu testen!!)</p>
-        </div>
-      </section>
-
-      <section class="slide slide-7" aria-label="Slide 7 von 13" aria-hidden="true">
-        <figure class="editorial-image work-photo" data-reveal style="--delay:120ms" aria-hidden="true">
-          <img src="assets/frau-maier-work.webp" alt="">
-        </figure>
-        <div class="slide__content reels-system">
-          <h2 class="hero-title" data-reveal>Test-Reels</h2>
-          <div class="method-grid" data-reveal style="--delay:180ms">
-            <p><strong>Der Ansatz:</strong> Keep it simple</p>
-            <p><strong>Umsetzung:</strong> zu 90% mit B-Rolls / 10% Face to Cam</p>
-          </div>
-          <p class="feature-copy" data-reveal style="--delay:280ms"><strong>Die Inhalte:</strong> spezifische Beiträge zum Thema STIL, Persönlichkeitsentwicklung, Spiritualität aber auch Lifestyle (funktioniert erfahrungsgemäß sehr gut!). Hier kann man sich wirklich risikofrei austoben und unterscheidliche Ansätze testen.</p>
-          <p class="closing-line" data-reveal style="--delay:380ms">Ein Beispiel:</p>
-        </div>
-      </section>
-
-      <section class="slide slide-8" aria-label="Slide 8 von 13" aria-hidden="true">
-        <div class="slide__content example-layout">
-          <div class="example-hook" data-reveal>
-            <h2>Beispiel-Hook als On-Screen Text im B-Roll:</h2>
-            <blockquote>„Alle glauben, ich sei eine ganz normale Stilberaterin, bis sie erfahren, dass ich…“</blockquote>
-          </div>
-          <div class="caption-card" data-reveal style="--delay:180ms">
-            <h3>Caption:</h3>
-            <ul>
-              <li>👉 regelmäßig psychidelische Reisen mache &amp; Retreats halte</li>
-              <li>👉 nicht an die Angstmacherei der Tageschau glaube</li>
-              <li>👉 Deutschland den Rücken gekehrt habe und mit meiner Familie auf Mallorca lebe</li>
-              <li>👉 mit Onlinekursen und Coachings n den letzten Jahren Millionen verdient habe</li>
-              <li>👉 mich immer freue, wenn ich um 11:11 oder 22:22 auf die Uhr schaue</li>
-              <li>👉 Frauen in meinen Räumen dazu bringe, ihr komplettes Leben zu verändern</li>
-              <li>…</li>
-            </ul>
-          </div>
-          <p class="example-result" data-reveal style="--delay:320ms">Solche Reels haben das Potenzial SEHR viel Reichweite zu erzielen und gleichzeitig auch viele GLEICHGESINNTE / QUALITATIVE Follower zu gewinnen, weil du sie nicht über „Mehrwert“ anziehst, sondern über „Gemeinsame Werte“ -&gt; Die Verbindung ist ab der ersten Sekunde sofort da (und es stößt diejenigen ab, die nicht so ticken wie du.)</p>
-        </div>
-      </section>
-
-      <section class="slide slide-9" aria-label="Slide 9 von 13" aria-hidden="true">
+      <section class="slide slide-10" aria-label="Ads">
         <div class="slide__content ads-layout">
-          <h2 class="hero-title" data-reveal><span class="title-number">3)</span> Ads</h2>
+          <h2 class="hero-title" data-reveal><span class="title-number">03</span> Ads</h2>
           <div class="ads-copy" data-reveal style="--delay:180ms">
             <p>Ihr habt Erfahrung mit Ads und du hast bereits jemandem im Team, der es operativ übernimmt.</p>
-            <p>Ich werde hier wertvolle Zuarbeit leisten bei den Hooks / Creatives und meine Erfahrungen weitergeben aus mehrfach 5-stelligem Adspend in Kundenprojekten.</p>
+            <p>Ich werde hier wertvolle Zuarbeit leisten bei den Hooks / Creatives und meine Erfahrungen weitergeben aus 4- bis 5-stelligem Ad Spend in Kundenprojekten.</p>
           </div>
           <div class="goals-card" data-reveal style="--delay:300ms">
             <h3>Ziele:</h3>
             <ul>
               <li>Profitable Ads mit digitalen Produkten</li>
-              <li>Leads in guter Qualität, für die auch weitere Produkte aus dem „Frau MAIER One-Stop-Shop“ relevant sind</li>
+              <li>Leads in guter Qualität, für die auch weitere Produkte aus dem „Frau MAIER One-Stop-Shop" relevant sind</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section class="slide slide-10" aria-label="Slide 10 von 13" aria-hidden="true">
-        <figure class="editorial-image finca-photo" data-reveal style="--delay:120ms" aria-hidden="true">
-          <img src="assets/mallorca-finca.webp" alt="">
-        </figure>
+      <section class="slide slide-11" aria-label="Wofür ich verantwortlich bin">
+        <div class="slide__content delivery-layout">
+          <h2 class="delivery-title" data-reveal>Wofür ich verantwortlich bin</h2>
+          <div class="responsibility" data-reveal style="--delay:180ms">
+            <ul class="statement-list statement-list--large">
+              <li>Deine Positionierung und die Angebotswelt dahinter</li>
+              <li>Das Content-System, das täglich neue Menschen erreicht (Konzept, Hooks, Produktion, Auswertung)</li>
+              <li>Die Creative- und Funnel-Steuerung, damit aus Reichweite Buchungen werden</li>
+            </ul>
+            <p class="contract-note">Die vollständige Leistungsbeschreibung liegt im Vertrag.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide slide-12" aria-label="Die Roadmap">
+        <div class="slide__content roadmap-layout">
+          <h2 class="hero-title" data-reveal>Die Roadmap</h2>
+          <div class="roadmap-grid">
+            <div data-reveal style="--delay:180ms">
+              <h3 class="roadmap-label">Der Start</h3>
+              <ol class="timeline">
+                <li><time>07.09.</time><span>Strategie-Besprechung und Startschuss</span></li>
+                <li><time>07.09. bis 14.09.</time><span>Onboarding, Zugänge, Einarbeitung</span></li>
+                <li><time>15.09.</time><span>Ready to rumble (ab geht's in die Umsetzung)</span></li>
+              </ol>
+            </div>
+            <div class="roadmap-mark" data-reveal style="--delay:320ms" aria-hidden="true">
+              <span class="roadmap-mark__arrow">→</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide slide-13" aria-label="Phase 2: Die Website">
         <div class="slide__content website-layout">
-          <h2 class="hero-title" data-reveal>Diese 3 Kanäle laufen parallel.</h2>
-          <div class="plus-sign" aria-hidden="true" data-reveal style="--delay:160ms">+</div>
-          <div class="website-copy" data-reveal style="--delay:240ms">
-            <p>30 Tage nach Start der Zusammenarbeit wird die Website erneuert:</p>
-            <p><a href="https://frau-maier-stilberatung.de/" target="_blank" rel="noreferrer">https://frau-maier-stilberatung.de/</a> wird zu <a href="http://www.frau-maier.de" target="_blank" rel="noreferrer">www.frau-maier.de</a>.</p>
+          <h2 class="hero-title" data-reveal>Phase 2: Die Website</h2>
+          <div class="website-copy" data-reveal style="--delay:200ms">
+            <p>https://frau-maier-stilberatung.de/ wird zu www.frau-maier.de.</p>
             <p>Die Seite bekommt ein hochwertiges Design und Inhalte, die das ausdrücken wer du wirklich bist und was man bei dir bekommt.</p>
             <p class="modern-premium">Modern, Premium</p>
           </div>
+          <p class="website-price" data-reveal style="--delay:340ms">Bei Vorauszahlung der 6 Monate enthalten. Sonst als eigenes Angebot individuell abgerechnet.</p>
         </div>
       </section>
 
-      <section class="slide slide-11" aria-label="Slide 11 von 13" aria-hidden="true">
-        <div class="slide__content roadmap-layout">
-          <h2 class="hero-title" data-reveal>Die Roadmap</h2>
-          <ol class="timeline" data-reveal style="--delay:180ms">
-            <li><time>07.09.</time><span>Strategie-Besprechung und Startschuss</span></li>
-            <li><time>07.09. – 14.09.</time><span>Onboarding, Zugänge, Einarbeitung</span></li>
-            <li><time>15.09.</time><span>Ready to rumble (ab geht’s in die Umsetzung)</span></li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="slide slide-12" aria-label="Slide 12 von 13" aria-hidden="true">
-        <div class="slide__content delivery-layout">
-          <h2 class="delivery-title" data-reveal>Was wird konkret umgesetzt?</h2>
-          <div class="delivery-grid" data-reveal style="--delay:180ms">
-            <article>
-              <h3>Personenmarke &amp; Angebotswelt</h3>
-              <ul>
-                <li>Positionierung deiner Personenmarke, ohne dich auf eine einzelne Nische zu reduzieren</li>
-                <li>Entwicklung einer gemeinsamen Marken- und Themenarchitektur</li>
-                <li>Einordnung deiner bestehenden Produkte in eine zusammenhängende Angebotswelt</li>
+      <section class="slide slide-14" aria-label="Zwei Beispiele">
+        <div class="slide__content proof-layout">
+          <h2 class="hero-title" data-reveal>Zwei Beispiele aus meinen Kundenprojekten.</h2>
+          <div class="proof-grid">
+            <article class="proof-card proof-card--primary" data-reveal style="--delay:200ms">
+              <em>Coach für Energiearbeit</em>
+              <p class="proof-label">Meine Arbeit</p>
+              <ul class="proof-scope">
+                <li>Webinar-Funnel-Strategie</li>
+                <li>Ads: Creatives und Copy</li>
+                <li>Optin-Seite und Prozess</li>
+                <li>E-Mail-Strecke</li>
+                <li>Verkaufsseite</li>
               </ul>
+              <p class="proof-headline">Verkauf einer 3.000€ Ausbildung</p>
+              <div class="proof-shots">
+                <figure class="proof-shot proof-shot--main"><img src="assets/case-energiearbeit-crop.jpg" alt="Nachricht der Kundin mit den Kampagnenzahlen" loading="lazy" decoding="async"></figure>
+              </div>
             </article>
-            <article>
-              <h3>Instagram &amp; Content</h3>
-              <ul>
-                <li>Content-Strategie und laufende Steuerung des Main Accounts</li>
-                <li>Aufbau des Test-Reel-Systems mit Themen, Hooks, Formaten und Testlogik</li>
-                <li>Auswertung der Ergebnisse und laufende Optimierung</li>
+            <article class="proof-card proof-card--secondary" data-reveal style="--delay:340ms">
+              <em>Astro-Coach, Programm zu den Rauhnächten (500 €)</em>
+              <p class="proof-label">Meine Arbeit</p>
+              <ul class="proof-scope proof-scope--single">
+                <li>Ads erstellt und geschaltet</li>
+                <li>Funnel mitentwickelt</li>
+                <li>Salespage mitentwickelt</li>
               </ul>
-            </article>
-            <article>
-              <h3>Ads &amp; Funnel</h3>
-              <ul>
-                <li>Analyse und Optimierung der bestehenden Ads</li>
-                <li>Entwicklung von Hooks und Creatives</li>
-                <li>Aufbau und Weiterentwicklung eines profitablen Evergreen-Funnels</li>
-              </ul>
-            </article>
-            <article>
-              <h3>Website</h3>
-              <ul>
-                <li>Neuausrichtung von frau-maier-stilberatung.de zu frau-maier.de</li>
-                <li>Konzeption, Design, Inhalte und Umsetzung</li>
-                <li>Übertragung der neuen Positionierung auf die gesamte Website</li>
-              </ul>
-            </article>
-            <article>
-              <h3>Laufende Zusammenarbeit</h3>
-              <ul>
-                <li>Strategische und kreative Gesamtsteuerung</li>
-                <li>Priorisierung der nächsten Schritte</li>
-                <li>Iteratives Testen und Optimieren auf Basis der Ergebnisse</li>
-              </ul>
+              <p class="proof-headline">Rund 150.000 € Launch-Umsatz. <span>Der Screenshot zeigt den Zwischenstand bei 100k.</span></p>
+              <figure class="proof-shot proof-shot--sm"><img src="assets/case-astro-2.jpg?v=2" alt="Nachricht aus dem Projektteam zum Launch-Ergebnis" loading="lazy" decoding="async"></figure>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="slide slide-13" aria-label="Slide 13 von 13" aria-hidden="true">
+      <section class="slide slide-15" aria-label="Dein Invest">
         <figure class="editorial-image investment-photo" data-reveal style="--delay:100ms" aria-hidden="true">
-          <img src="assets/frau-maier-portrait.webp" alt="">
+          <img src="assets/frau-maier-portrait.webp" alt="" loading="lazy" decoding="async">
         </figure>
         <div class="slide__content investment-layout">
-          <img class="signature-logo investment-logo" src="assets/frau-maier-signature.png" alt="Frau Maier" data-reveal>
+          <img class="signature-logo investment-logo" src="assets/frau-maier-signature.png" alt="Frau Maier" loading="lazy" decoding="async" data-reveal>
           <h2 class="investment-title" data-reveal style="--delay:120ms">Dein Invest</h2>
-          <div class="price-grid" data-reveal style="--delay:220ms">
+          <div class="price-stack" data-reveal style="--delay:220ms">
             <div class="price-option">
-              <strong>12.500 €</strong>
-              <span>monatlich</span>
-              <small>Mindestlaufzeit: 6 Monate</small>
+              <em>3 Monate</em>
+              <strong>10.000 €</strong>
+              <span>pro Monat</span>
             </div>
-            <div class="price-or">oder</div>
+            <div class="price-option">
+              <em>6 Monate</em>
+              <strong>8.888 €</strong>
+              <span>pro Monat</span>
+            </div>
             <div class="price-option price-option--accent">
-              <strong>65.000 €</strong>
-              <span>bei Zahlung der gesamten 6 Monate im Voraus</span>
+              <em>6 Monate im Voraus</em>
+              <strong>52.000 €</strong>
+              <span>Website inklusive, Wert 8.000 bis 10.000 €</span>
             </div>
           </div>
-          <div class="price-notes" data-reveal style="--delay:340ms">
-            <p>Alle Preise zzgl. USt.</p>
-            <p>Media-Budget und externe Produktionskosten sind nicht enthalten.</p>
+          <p class="price-terms" data-reveal style="--delay:300ms">Verlängerst du nach drei Monaten auf sechs, rechne ich rückwirkend zum Sechsmonatspreis ab.</p>
+          <div class="price-notes" data-reveal style="--delay:400ms">
+            <p>Website nur bei Vorauszahlung enthalten.</p>
           </div>
         </div>
       </section>
+
+      <section class="slide slide-16" aria-label="Der nächste Schritt">
+        <figure class="editorial-image closing-photo" data-reveal style="--delay:100ms" aria-hidden="true">
+          <img src="assets/martin-thun.jpg" alt="" loading="lazy" decoding="async">
+        </figure>
+        <div class="slide__content closing-layout">
+          <h2 class="hero-title" data-reveal>Startschuss am 7. September.</h2>
+          <ol class="closing-steps" data-reveal style="--delay:200ms">
+            <li>
+              <em>Jetzt</em>
+              <p>Du lässt das Angebot wirken und triffst die Entscheidung.</p>
+            </li>
+            <li>
+              <em>07.09.</em>
+              <p>Wir besprechen letzte Details.</p>
+            </li>
+            <li>
+              <em>15.09.</em>
+              <p>Das neue Kapitel Frau Maier 2.0 beginnt💎</p>
+            </li>
+          </ol>
+          <div class="closing-marks" data-reveal style="--delay:500ms">
+            <img class="mark-script" src="assets/frau-maier-signature.png" alt="Frau Maier" loading="lazy" decoding="async">
+            <span class="mark-x" aria-hidden="true">×</span>
+            <span class="mark-word"><span class="mark-word__name">Martin Thun</span></span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+      </div>
     </div>
   </main>
 
-  <nav class="chrome" aria-label="Slide-Navigation">
-    <div class="counter" aria-live="polite"><span id="current">01</span> / 13</div>
-    <div class="progress" aria-hidden="true"><div class="progress__bar" id="progress"></div></div>
-    <div class="controls">
-      <button class="control" id="previous" type="button" aria-label="Vorherige Slide" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
-      <button class="control" id="next" type="button" aria-label="Nächste Slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
-    </div>
-  </nav>
-  <script src="deck.js"></script>
+  <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress__bar" id="progress"></div></div>
+  <div class="scroll-cue" id="cue" aria-hidden="true"><span class="scroll-cue__label">scroll</span><span class="scroll-cue__line"></span></div>
+  <script src="v3-smooth.js?v=16"></script>
 </body>
 </html>
